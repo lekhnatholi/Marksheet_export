@@ -28,7 +28,7 @@ Route::group(['namespace' => 'Frontend'],function (){
 //
 Route::group(['namespace'=> 'Backend'],function (){
 
-    Route::any('/','UsersController@index')->name('dashboard');
+    Route::any('/dashboard','UsersController@index')->name('dashboard');
 });
 
 
