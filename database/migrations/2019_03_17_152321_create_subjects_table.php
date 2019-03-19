@@ -14,10 +14,12 @@ class CreateSubjectsTable extends Migration
     public function up()
     {
         Schema::create('subjects', function (Blueprint $table) {
+            $table->engine = 'innoDB';
             $table->increments('sub_id');
             $table->integer('subject_id')->nullable();
             $table->foreign('subject_id')->references('grade')->on('students_info');
             $table->string('subjects','100')->nullable();
+            $table->string('teacher_name','100')->nullable();
             $table->timestamps();
         });
     }

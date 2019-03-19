@@ -26,9 +26,11 @@ Route::group(['namespace' => 'Frontend'],function (){
 //    Route::any('/logout','UsersController@logout')->name('logout');
 //});
 //
-Route::group(['namespace'=> 'Backend'],function (){
+Route::group(['namespace'=> 'Backend','prefix'=>'admin'],function (){
 
-    Route::any('/dashboard','UsersController@index')->name('dashboard');
+    Route::any('/','UsersController@index')->name('dashboard');
+    Route::any('/view_marksheet','marksheetController@show')->name('view_marksheet');
+    Route::any('/export','marksheetController@export')->name('export.pdf');
 });
 
 

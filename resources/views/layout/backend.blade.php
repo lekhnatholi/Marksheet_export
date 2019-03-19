@@ -60,6 +60,8 @@
     {{--ckeditor--}}
     <link rel="stylesheet" href="{{url('public/ckeditor/content.css')}}">
 
+    <link rel="stylesheet" href="{{url('public/backend/css/custom.css')}}">
+
 
     <!-- jQuery 3 -->
     <script src="{{ url('public/backend/assets/vendor_components/jquery/dist/jquery.js')}}"></script>
@@ -399,18 +401,14 @@
                 <!-- user menu -->
                 <li class="treeview">
 
-                    <a href="#">
+                    <a href="{{route('view_marksheet')}}">
                         <i class="fa fa-users text-red"></i>
-                        <span>Visitors</span>
+                        <span>Students</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li><a href="" >Travellers</a></li>
-                        <li><a href="">Guest</a></li>
-                        <li><a href="">Vendors</a></li>
-                    </ul>
+
 
                 </li>
 

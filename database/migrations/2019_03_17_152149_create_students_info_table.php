@@ -14,8 +14,9 @@ class CreateStudentsInfoTable extends Migration
     public function up()
     {
         Schema::create('students_info', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('student_id');
-            $table->integer('roll_no')->nullable()->unique();
+            $table->integer('roll_no')->unique()->nullable();
             $table->string('student_name','100')->nullable();
             $table->string('email','100')->nullable();
             $table->date('DOB')->nullable();
