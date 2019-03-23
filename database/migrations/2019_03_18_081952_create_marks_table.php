@@ -15,7 +15,6 @@ class CreateMarksTable extends Migration
     {
         Schema::create('marks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('subject','100')->nullable();
             $table->float('first_term','100')->nullable();
             $table->float('second_term','100')->nullable();
             $table->float('third_term','100')->nullable();

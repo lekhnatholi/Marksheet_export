@@ -31,6 +31,14 @@ Route::group(['namespace'=> 'Backend','prefix'=>'admin'],function (){
     Route::any('/','UsersController@index')->name('dashboard');
     Route::any('/view_marksheet','marksheetController@show')->name('view_marksheet');
     Route::any('/export','marksheetController@export')->name('export.pdf');
+
+    Route::any('/ExportClients','marksheetController@ExportClients');
+
+    Route::any('/importExport', 'marksheetController@importExport')->name('importExport');
+
+    Route::any('/downloadExcel/{type}', 'marksheetController@downloadExcel');
+
+    Route::any('/importExcel', 'marksheetController@importExcel')->name('importExcel');
 });
 
 
