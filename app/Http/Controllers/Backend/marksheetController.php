@@ -71,12 +71,14 @@ class marksheetController extends Controller
     public function importExcel(Request $request)
 
     {
+        echo "import excel";die;
 
         $request->validate([
 
             'import_file' => 'required'
 
         ]);
+        echo "import excel";die;
 
 
 
